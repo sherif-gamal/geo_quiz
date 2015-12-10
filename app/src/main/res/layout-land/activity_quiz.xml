@@ -1,14 +1,13 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:gravity="center" tools:context=".QuizActivity"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
     <TextView android:id="@+id/question_text_view" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" android:padding="24dp"/>
+        android:layout_height="wrap_content" android:padding="24dp" android:layout_gravity="center_horizontal"/>
 
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" android:orientation="horizontal">
+        android:layout_height="wrap_content" android:orientation="horizontal" android:layout_gravity="center_vertical|center_horizontal">
 
         <Button
             android:id="@+id/true_button"
@@ -24,23 +23,20 @@
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" android:orientation="horizontal">
-
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/previous_button"
         android:src="@drawable/arrow_left"
-        android:contentDescription="@string/previous_button"/>
+        android:contentDescription="@string/previous_button"
+        android:layout_gravity="bottom|left"/>
 
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/next_button"
         android:src="@drawable/arrow_right"
-        android:contentDescription="@string/next_button"/>
-    </LinearLayout>
+        android:contentDescription="@string/next_button"
+        android:layout_gravity="bottom|right"/>
 
-</LinearLayout>
+</FrameLayout>
